@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>Chiffres du Covid au 19/04/2020</h1>
+	<h3>Chiffres du
+		{{ data.allFranceDataByDate.94.nom }}</h3>
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+		<div class="card-body">
+			<h4 class="card-title">Hospitalisés</h4>
+			<p class="card-text">{{ data.allFranceDataByDate.94.hospitalises }}</p>
+		</div>
+	</div>
+	<div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+		<div class="card-body">
+			<h4 class="card-title">En Réanimation</h4>
+			<p class="card-text">{{ data.allFranceDataByDate.94.reanimation }}</p>
+		</div>
+	</div>
+	<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+		<div class="card-body">
+			<h4 class="card-title">Décès</h4>
+			<p class="card-text">{{ data.allFranceDataByDate.94.deces }}</p>
+		</div>
+	</div>
+	<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+		<div class="card-body">
+			<h4 class="card-title">Guéris</h4>
+			<p class="card-text">{{ data.allFranceDataByDate.94.gueris }}</p>
+		</div>
+	</div>
+	<h6>Source :
+		{{ data.allFranceDataByDate.94.source.nom }}</h6>
+{% endblock %}
+
+{% block title %}
+	Chiffres Covid au 19/04/2020
+{% endblock %}
